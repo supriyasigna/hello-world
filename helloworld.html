@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World • Autonomous Deployment Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center p-6 font-sans">
+  <div class="max-w-md w-full bg-slate-900 border border-slate-800 rounded-3xl p-8 text-center space-y-6 shadow-2xl">
+    
+    <!-- App Badge & Icon -->
+    <div class="h-16 w-16 rounded-2xl bg-gradient-to-tr from-rose-500 to-indigo-600 flex items-center justify-center mx-auto text-white font-extrabold text-2xl shadow-lg shadow-rose-500/20">
+      🚀
+    </div>
+
+    <!-- Title & Description -->
+    <div class="space-y-2">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+        <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Live on Localhost:3000
+      </span>
+      <h1 class="text-2xl font-extrabold text-white">Hello World!</h1>
+      <p class="text-sm text-slate-400 leading-relaxed">
+        This app was uploaded as a ZIP and deployed independently by the AI Deployment Agent.
+      </p>
+    </div>
+
+    <!-- Interactive Client Counter Test -->
+    <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-3">
+      <div class="text-xs text-slate-400">Interactive Runtime Test:</div>
+      <div id="counter" class="text-3xl font-extrabold text-indigo-400">0</div>
+      <button 
+        onclick="const el = document.getElementById('counter'); el.textContent = parseInt(el.textContent) + 1;" 
+        class="w-full py-2 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs rounded-lg transition cursor-pointer shadow-md"
+      >
+        Click to Increment Counter
+      </button>
+    </div>
+
+    <!-- Deployment Metadata -->
+    <div class="text-[11px] text-slate-500 font-mono">
+      Target: Open-Source Local Server • Status: 200 OK
+    </div>
+  </div>
+</body>
+</html>
